@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.allen.seekweather">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.addcity.AddCityActivity"
+            android:label="添加城市"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.future_weather.FutureWeatherActivity"
+            android:label="@string/title_activity_futrue_weather"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.city_weather.CityWeatherActivity"
+            android:label="@string/title_activity_city_weather"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.about.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.TestActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

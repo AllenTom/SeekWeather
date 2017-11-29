@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_future_weather"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.allen.seekweather.activity.future_weather.FutureWeatherActivity"
+    tools:showIn="@layout/activity_future_weather">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:background="#eee"
+        android:id="@+id/future_weather_recycler_view"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
