@@ -3,10 +3,10 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.1'
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -36,10 +36,10 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:27.0.2'
     testCompile 'junit:junit:4.12'
-    compile 'com.squareup.okhttp3:okhttp:3.3.0'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.0'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'joda-time:joda-time:2.9.6'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }

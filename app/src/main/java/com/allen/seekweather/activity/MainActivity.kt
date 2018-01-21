@@ -4,7 +4,6 @@ import android.app.Fragment
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
@@ -14,32 +13,25 @@ import com.allen.seekweather.fragment.city_weather.CityWeatherFragment
 import com.allen.seekweather.fragment.main.MainFragment
 import com.orhanobut.hawk.Hawk
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.app_bar_main.*
 import org.jetbrains.anko.startActivity
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-    lateinit var mainFragment: MainFragment
-    lateinit var cityWeatherFragment : CityWeatherFragment
+    private lateinit var mainFragment: MainFragment
+    private lateinit var cityWeatherFragment: CityWeatherFragment
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
-        val toggle = ActionBarDrawerToggle(
-                this, drawer_layout, toolbar, R.string.navigation_drawer_open,
-                R.string.navigation_drawer_close)
-        drawer_layout.addDrawerListener(toggle)
-        toggle.syncState()
         Hawk.init(this).build()
         mainFragment = MainFragment()
         var homeCity: String = "北京"
-        if(Hawk.contains("HomeCity")){
+        if (Hawk.contains("HomeCity")) {
             homeCity = Hawk.get("HomeCity")
         }
-        val mainFragmentBundle  = Bundle()
-        mainFragmentBundle.putCharSequence("CityId",homeCity)
+        val mainFragmentBundle = Bundle()
+        mainFragmentBundle.putCharSequence("CityId", homeCity)
         mainFragment.arguments = mainFragmentBundle
         cityWeatherFragment = CityWeatherFragment()
-        changeFragment(cityWeatherFragment)
+        changeFragment(mainFragment)
         nav_view.setNavigationItemSelectedListener(this)
     }
 
